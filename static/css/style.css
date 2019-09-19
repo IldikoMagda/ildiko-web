@@ -189,6 +189,11 @@ top: 0;
   color: azure;
   overflow-x: hidden;
   height: 93vh;
+  width: 100vw;
+  
+}
+.v-header{
+  overflow: hidden;
 }
 
 .content{
