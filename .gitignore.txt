@@ -29,3 +29,5 @@ tmp/**
 .vs/
 venv
 .vscode
+**/*.pyc
+**/lib/
