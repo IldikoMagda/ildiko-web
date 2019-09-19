@@ -11,20 +11,20 @@
 <body>
     <nav>
         <div class="logo">
-            <h4>Ildiko Magda</h4>
+            <a href= "{{url_for('home')}}">ILDIKO MAGDA</a>
         </div>
         <ul class="nav-links">
             <li class="active">
-                <href="{{ url_for('about.index')}}">About</href>
+                <a href="{{ url_for('about.index')}}">About</a>
             </li>
             <li>
-                <href="{{ url_for('interactive.index') }}">Interactive</a>
+                <a href="{{ url_for('interactive.index') }}">Interactive</a>
             </li>
             <li>
-                <href="{{ url_for('portfolio.index') }}">Portfolio</a>
+                <a href="{{ url_for('portfolio.index') }}">Portfolio</a>
             </li>
             <li>
-                <href="{{ url_for('contact.index') }}">Contact</a>
+                <a href="{{ url_for('contact.index') }}">Contact</a>
             </li>
         </ul>
         <div class="burger">
