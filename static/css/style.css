@@ -2,6 +2,7 @@
   margin: 0px;
   padding: 0%;
   box-sizing: border-box;
+  overflow-x: hidden
 }
 
 nav{
@@ -10,13 +11,17 @@ display: flex;
 justify-content: space-around;
 align-items: center; 
 min-height: 7vh;
-background-color: rgb(7, 7, 7);
+background-color: black;
 font-family: 'Amethysta', serif;
+position: sticky;
+top: 0px;
+overflow-x: hidden;
+
 
 }
 
 .logo{
-    color: bisque;
+    color: rgb(228, 250, 249);
     text-transform: capitalize;
     letter-spacing: 5px;
     font-size: 30px;
@@ -24,11 +29,11 @@ font-family: 'Amethysta', serif;
 }
 
 .nav-links{
-    color: bisque;
+    color: rgb(228, 250, 249);
     display: flex;
     justify-content: space-around; 
     width: 50%;
-    font-size: 26px;
+    font-size: 22px;
     letter-spacing: 2px;
     cursor: pointer;
 
@@ -38,18 +43,24 @@ font-family: 'Amethysta', serif;
     text-decoration: none;
     letter-spacing: 10px;
     font-weight: bold;
-    font-size: 22px; 
-
+    font-size: 22px;
 }
+
+.nav-links a:hover,
+.nav-links a.active
+{
+  background: red;  
+}
+
+
 .nav-links li{
     list-style-type: none;
     cursor: pointer;
-
 }
 
 .burger{
     display: none;
-    background-color:rgb(7, 7, 7);
+    background-color:black;
     cursor: pointer;
     margin: 2px;
     transition: all 0.5s ease;
@@ -58,7 +69,7 @@ font-family: 'Amethysta', serif;
 .burger div{
     width: 60px;
     height: 3px;
-    background-color: bisque;
+    background-color: rgb(228, 250, 249);
     margin: 10px;
    
 }
@@ -78,6 +89,9 @@ font-family: 'Amethysta', serif;
 .nav-links{
   width: 70%;
 }
+.content{
+  display: none;
+}
 
 }
 
@@ -87,17 +101,18 @@ font-family: 'Amethysta', serif;
     overflow-x: hidden;
   }
   .nav-links{
-    position: absolute;
+    position: fixed;
     right: 2px;
     height: 92vh;
     top: 7vh;
-    background-color: rgb(7, 7, 7);
+    background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 45%;
+    width: 34%;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
+    opacity: 0.8;
   }
   .nav-links li{
     opacity: 0%;
@@ -106,10 +121,34 @@ font-family: 'Amethysta', serif;
   .burger{
     display: block;
   }
+  .content{
+   
+    padding-right: 3rem;
+    padding-left: 3rem;
+    font-size: 22 px; 
+    margin-bottom: 100px;
+  }
+  .content h1{
+    color: white;
+    font-size: 10px;
+  }
+  .content p{
+    font-size: 8px;
+
+  }
+  .v-header{
+    position: fixed;
+    top: 93 vh;
+    left: 0 ; 
+    right: 0; 
+    z-index: -3;
+
+  }
 }
 
 .nav-active{
   transform: translateX(0%);
+
 }
 
 @keyframes navLinkFade{
@@ -136,3 +175,54 @@ font-family: 'Amethysta', serif;
 .toggle .line4{
   transform: rotate(45deg) translate(-7px,-11px);
   }
+
+.body{
+  margin:0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: azure;
+  overflow-x: hidden;
+}
+
+.content{
+  max-width: 800px;
+  text-align: center;
+  margin: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  line-height: 2.5;
+  position: absolute;
+  display: inline-block;
+  vertical-align: middle;
+  top: 390px; 
+  left: 1rem; 
+  right: 1rem;
+  overflow-x: hidden;
+  color: white;
+  font-size: 22px;
+  opacity: 1;
+  
+
+}
+.content h1{
+  color: white;
+  font-size: 60px;
+
+}
+.content p{
+  color: white;
+  font-size: 28px;
+
+}
+.content a{
+  color:white;
+  font-size: 24px;
+  background-color: rgb(72, 136, 192)
+}
+
+.btn{
+  background-color: rgb(117, 128, 226);
+  color: white;
+
+}
