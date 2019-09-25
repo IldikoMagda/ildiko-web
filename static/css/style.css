@@ -114,7 +114,7 @@ top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 34%;
+    width: 47%;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
     opacity: 0.8;
@@ -149,8 +149,7 @@ top: 0;
     z-index: -3;
     overflow-x: hidden;
 
-  }
-}
+  }}
 
 .nav-active{
   transform: translateX(0%);
@@ -236,4 +235,79 @@ top: 0;
   background-color: rgb(117, 128, 226);
   color: white;
 
+}
+.header{
+  height: 70vh;
+  width: 100vw;
+  background: rgb(0, 0, 0);
+  overflow: hidden;
+
+  
+}
+#bubble{
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right:auto;
+  height:70vh;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+ 
+}
+.motto-above{
+  position: absolute;
+  margin-bottom: 100px;
+  top: 15vh; 
+  left: 10vw;
+  
+}
+.motto-above p{
+  font-size: 80px;
+  font-family: 'Tangerine', cursive;
+  color: transparent;
+  z-index: 10;
+  letter-spacing: 4px;
+  word-spacing: 3px;
+  line-height: 1.5;
+  background-image: linear-gradient(to top right, rgb(147, 231, 246) 0%, rgba(118, 87, 202, 0.8) 45%, rgba(248, 85, 10, 0.575) 70%);
+  -webkit-background-clip: text;
+  animation: animate 20s linear infinite;
+  background-size: 1000%;
+}
+
+@keyframes animate{
+  0%
+  {
+    background-position: 0% 100%;
+  }
+  50%
+  {
+    background-position: 100% 0%;
+  }
+  100%
+  {
+    background-position: 0% 100%;
+  }
+}
+@media screen and (max-width:768px){
+  .motto-above{
+    display: none;
+
+  }
+}
+@media screen and (max-width:1424px){
+  .motto-above{
+    position: fixed;
+    bottom: 0 vh;
+    top: 50vh; 
+    left: 5vw;
+    
+    
+  }
+  .motto-above p{
+    font-size: 52px;
+    
+
+  }
 }
