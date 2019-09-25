@@ -258,11 +258,14 @@ top: 0;
 .motto-above{
   position: absolute;
   margin-bottom: 100px;
-  top: 15vh; 
-  left: 10vw;
+  top: 10vh; 
+  left: 2vw;
   
 }
 .motto-above p{
+  position: relative;
+  left: 1vw;
+  top: 13vh;
   font-size: 80px;
   font-family: 'Tangerine', cursive;
   color: transparent;
@@ -298,16 +301,17 @@ top: 0;
 }
 @media screen and (max-width:1424px){
   .motto-above{
-    position: fixed;
     bottom: 0 vh;
-    top: 50vh; 
-    left: 5vw;
+    left: 0;
+    bottom:0;
+    top: 300px;
+  
     
     
   }
   .motto-above p{
+    position: relative;
     font-size: 52px;
-    
-
+    top: 100px;
   }
 }
