@@ -1,3 +1,58 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+
+
 *{
   margin: 0px;
   padding: 0%;
@@ -39,7 +94,7 @@ z-index: 2000;
     display: flex;
     justify-content: space-around; 
     width: 50%;
-    font-size: 22px;
+    font-size: 18px;
     letter-spacing: 2px;
     cursor: pointer;
 
@@ -49,7 +104,7 @@ z-index: 2000;
     text-decoration: none;
     letter-spacing: 5px;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .nav-links a:hover,
@@ -137,7 +192,7 @@ z-index: 2000;
    
     padding-right: 3rem;
     padding-left: 3rem;
-    font-size: 22 px; 
+    font-size: 18 px; 
     margin-bottom: 100px;
    
   }
@@ -195,12 +250,22 @@ z-index: 2000;
   line-height: 1.5;
   color: azure;
   overflow-x: hidden;
+  overflow-y: hidden;
   height: 93vh;
   width: 100vw;
   
 }
 .v-header{
   overflow: hidden;
+  overflow-y: hidden; 
+  overflow-x:hidden;
+}
+#mylovelybubbles{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .content{
@@ -218,24 +283,24 @@ z-index: 2000;
   right: 1rem;
   overflow-x: hidden;
   color: white;
-  font-size: 22px;
+  font-size: 18px;
   opacity: 1;
   
 
 }
 .content h1{
   color: white;
-  font-size: 60px;
+  font-size: 50px;
 
 }
 .content p{
   color: white;
-  font-size: 28px;
+  font-size: 22px;
 
 }
 .content a{
   color:white;
-  font-size: 24px;
+  font-size: 18px;
   background-color: rgb(72, 136, 192)
 }
 
@@ -274,7 +339,7 @@ z-index: 2000;
   position: relative;
   left: 1vw;
   top: 13vh;
-  font-size: 80px;
+  font-size: 60px;
   font-family: 'Tangerine', cursive;
   color: transparent;
   z-index: 2;
@@ -320,7 +385,7 @@ z-index: 2000;
   }
   .motto-above p{
     position: relative;
-    font-size: 48px;
+    font-size: 40px;
     top: 200px;
   }
   #bubble{
@@ -347,20 +412,23 @@ section #icon-bar{
 section #icon-bar li {
   text-align: center;
   display: block;
-  width: 80px;
+  width: 60px;
   background-color: transparent;
   list-style: none;
+  
 
 }
 section #icon-bar li div {
-  width: 90px;
-  height: 60px;
+  width: 70px;
+  height: 50px;
   font-size: 3.4em;
   background-color:transparent;
   transition: all 0.5s ease;
+  
 }
 section #icon-bar li a {
   color: #46c4f7;
+ 
 }
 section #icon-bar li div:hover {
   transform: rotate(360deg);
@@ -388,14 +456,66 @@ section #icon-bar li span {
 }
 
 .aboutme h1{
-  font-size: 34px;
-  letter-spacing: 3px;
+  font-size: 26px;
+  letter-spacing: 2px;
 }
 
 .aboutme p{
   padding-top: 50px;
-  font-size: 26px;
+  font-size: 18px;
   letter-spacing: 2px;
-  line-height: 1.;
+  line-height: 1.5;
+  
 
+}
+#pictos{   
+  width: 1050px;
+  margin-top:90px;
+  margin-left: auto; 
+  margin-right: auto;
+  text-align: justify;
+  -ms-text-justify: distribute-all-lines;
+  text-justify: distribute-all-lines;
+}
+#pictos a {
+  vertical-align: top;
+  display: inline-block;
+  display: inline;
+  zoom: 1;
+}
+.stretch {
+  width: 100%;
+  display: inline-block;
+  font-size: 0;
+  line-height: 0
+}
+
+.secondsection{
+  background-color:rgba(98, 13, 2, 0.164);
+  position: relative;
+  margin-left: 0%;
+  margin-right: 0%;
+  padding-top: 80px;
+  padding-bottom: 60px;
+  font-family: 'Nunito', sans-serif;
+  z-index: -2;
+}
+.secondsection h1{
+  margin-left: 15%;
+  margin-right: 15%;
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+#nameofpictos{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  margin-left: 15%;
+  margin-right: 15%;
+  font-size: 20px;
+  letter-spacing: 3px;
+  list-style: none;
+  padding-top: 50px;
+  font-weight: bold;
 }
