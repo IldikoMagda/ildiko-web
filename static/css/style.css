@@ -331,15 +331,16 @@ z-index: 2000;
 .motto-above{
   position: absolute;
   margin-bottom: 100px;
-  top: 10vh; 
-  left: 2vw;
+  top: 25%; 
+  left: 3vw;
+  font-size: 50px;
   
 }
 .motto-above p{
   position: relative;
   left: 1vw;
   top: 13vh;
-  font-size: 60px;
+  
   font-family: 'Tangerine', cursive;
   color: transparent;
   z-index: 2;
@@ -377,19 +378,25 @@ z-index: 2000;
 }
 @media screen and (max-width:1424px){
   .motto-above{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     bottom: 0 vh;
     left: 10px;
     bottom:0;
-    top: 3vh;  
+    top: 40%;  
     
   }
   .motto-above p{
     position: relative;
+    justify-content: space-around;
+    display: inline-block;
     font-size: 40px;
-    top: 200px;
+
+    
   }
   #bubble{
-    display: none;
+    display: block;
   }
 }
 
@@ -412,9 +419,10 @@ section #icon-bar{
 section #icon-bar li {
   text-align: center;
   display: block;
-  width: 60px;
+  width: 80px;
   background-color: transparent;
   list-style: none;
+  color:transparent;
   
 
 }
@@ -435,11 +443,11 @@ section #icon-bar li div:hover {
   border-radius: 150px;
 }
 section #icon-bar li span {
-  width: 120px;
+  width: 10px;
   height: 20px;
   display: block;
   padding: 15px 0px;
-  color: rgb(224, 202, 167);
+  color:transparent;
   text-transform: uppercase;
   font-size: 1.2em;
   text-align: center;
@@ -469,7 +477,7 @@ section #icon-bar li span {
 
 }
 #pictos{   
-  width: 1050px;
+  width: 70vw;
   margin-top:90px;
   margin-left: auto; 
   margin-right: auto;
@@ -487,11 +495,11 @@ section #icon-bar li span {
   width: 100%;
   display: inline-block;
   font-size: 0;
-  line-height: 0
+  line-height: 0;
 }
 
 .secondsection{
-  background-color:rgba(98, 13, 2, 0.164);
+  background-color:rgb(247, 197, 164);
   position: relative;
   margin-left: 0%;
   margin-right: 0%;
@@ -499,11 +507,12 @@ section #icon-bar li span {
   padding-bottom: 60px;
   font-family: 'Nunito', sans-serif;
   z-index: -2;
+  font-size: 10px;
 }
 .secondsection h1{
   margin-left: 15%;
   margin-right: 15%;
-  font-size: 30px;
+  font-size: 1.8rem;
   letter-spacing: 3px;
 }
 #nameofpictos{
@@ -513,9 +522,36 @@ section #icon-bar li span {
   color: black;
   margin-left: 15%;
   margin-right: 15%;
-  font-size: 20px;
+  font-size: 1.0rem;
   letter-spacing: 3px;
   list-style: none;
-  padding-top: 50px;
+  padding-top: 70px;
   font-weight: bold;
+  opacity: 0.65;
+}
+
+@media screen and (max-width:768px){
+  #pictos a{
+    padding-bottom: 5%;
+    width: 30vw;
+
+  }
+  #nameofpictos{
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 0;
+    margin-left: 70vw;
+    width: 70px;
+    height: 140vh; 
+    top: 90px;
+    line-height: 40px;
+  }
+  .stretch {
+    width: 100%;
+    display: inline-block;
+    font-size: 1.5rem;
+    line-height: 2;
+  }
 }
