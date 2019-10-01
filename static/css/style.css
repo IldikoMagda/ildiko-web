@@ -538,15 +538,7 @@ section #icon-bar li span {
   }
   #nameofpictos{
     position: absolute;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    margin-right: 0;
-    margin-left: 70vw;
-    width: 70px;
-    height: 140vh; 
-    top: 90px;
-    line-height: 40px;
+    font-size: 0.5rem;
   }
   .stretch {
     width: 100%;
@@ -555,3 +547,24 @@ section #icon-bar li span {
     line-height: 2;
   }
 }
+@media screen and (max-width:1424px){
+  img.responsive{
+    width:100px;
+    height: 100px;
+
+  }
+  #pictos a{
+    padding-bottom: 5%;
+    width: 30vw;
+
+    }
+  #nameofpictos{
+    position: relative;
+    font-size: 0.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  }
+
