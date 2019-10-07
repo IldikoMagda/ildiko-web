@@ -99,12 +99,31 @@
 
  <div class="flourish-embed" data-src="visualisation/738450"></div><script src="https://public.flourish.studio/resources/embed.js"></script>
 </div>
+
 <div class="button-container">
 <button value="Refresh Page" onClick="window.location.reload();" >Replay</button>
   </div>
  
 <div class="fourthsection">
- <h1>My fourth section recent projects --buttons</h1>
+ <h1>Recent Projects</h1>
+ 
+ <div class="projectpic-box">
+   <img id="az" src={{url_for("static", filename="neuro-ai.jpeg")}} alt="Project1">
+  
+   <img id="az" src={{url_for("static", filename="cloudtech.jpg")}} alt="Project2">
+  
+   <img id="az" src={{url_for("static", filename="statistics.jpg")}} alt="Project3"> 
+  
+   <img id="az" src={{url_for("static", filename="genetics.jpg")}} alt="Project4">
+   
+ </div>
+ 
+ 
+ <div class="projectname-box">
+  <a href={{url_for('portfolio.index')}}>Project1</a>
+  <a href={{url_for('portfolio.index')}}>Project2</a>
+  <a href={{url_for('portfolio.index')}}>Project3</a>
+  <a href={{url_for('portfolio.index')}}>Project4</a>
 </div>
 
 <div class="fifthsection">
