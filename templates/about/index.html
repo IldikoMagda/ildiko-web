@@ -107,25 +107,49 @@
 <div class="fourthsection">
  <h1>Recent Projects</h1>
  
- <div class="projectpic-box">
-   <img id="az" src={{url_for("static", filename="neuro-ai.jpeg")}} alt="Project1">
-  
-   <img id="az" src={{url_for("static", filename="cloudtech.jpg")}} alt="Project2">
-  
-   <img id="az" src={{url_for("static", filename="statistics.jpg")}} alt="Project3"> 
-  
-   <img id="az" src={{url_for("static", filename="genetics.jpg")}} alt="Project4">
-   
+ <div class="projectpic-container">
+
+    <div class="picbox">
+        <div class= "imgBox">
+          <a href={{url_for('portfolio.index')}}><img src={{url_for("static", filename="neuro-ai.jpeg")}} alt="Project1"></a>   
+        </div>
+    </div>
+
+    <div class="picbox">
+        <div class= "imgBox">
+          <a href={{url_for('portfolio.index')}}><img src={{url_for("static", filename="cloudtech.jpg")}} alt="Project2"></a>
+        </div>
+    </div>    
+
+    <div class="picbox">
+        <div class= "imgBox">
+          <a href={{url_for('portfolio.index')}}><img src={{url_for("static", filename="statistics.jpg")}} alt="Project3"></a> 
+                
+        </div>
+    </div>
+
+    <div class="picbox">
+        <div class= "imgBox">
+          <a href={{url_for('portfolio.index')}}><img src={{url_for("static", filename="genetics.jpg")}} alt="Project4"></a>
+        </div>
+    </div>
+
+
  </div>
  
  
- <div class="projectname-box">
-  <a href={{url_for('portfolio.index')}}>Project1</a>
-  <a href={{url_for('portfolio.index')}}>Project2</a>
-  <a href={{url_for('portfolio.index')}}>Project3</a>
-  <a href={{url_for('portfolio.index')}}>Project4</a>
-</div>
+  <div class="projectname-box">
 
+  <a href={{url_for('portfolio.index')}}>Project1</a>
+
+  <a href={{url_for('portfolio.index')}}>Project2</a>
+
+  <a href={{url_for('portfolio.index')}}>Project3</a>
+
+  <a href={{url_for('portfolio.index')}}>Project4</a>
+
+  </div>
+</div>
 <div class="fifthsection">
  <h1>pictore and arrow of me</h1>
  <p>Random facts about me </p>
