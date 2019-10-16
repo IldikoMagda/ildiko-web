@@ -160,8 +160,50 @@
   </div>
 </div>
 <div class="fifthsection">
- <h1>pictore and arrow of me</h1>
- <p>Random facts about me </p>
+  <h1>Well, this's me...</h1> 
+
+  <div class= "fifth-container" id="ffc">
+  
+    <div class="mepic-box">
+      <img src={{url_for("static", filename="ildiitaly.jpg")}} alt="MeinItaly" >
+    </div> 
+
+    <div class="arrow-box">
+      <img src={{url_for("static", filename="blackarrow.png")}} alt="arrowtome" >
+    </div> 
+
+    <div class="facts-box">
+
+      <div class="staticpart">
+       <p>Some Random Facts About Me</p> 
+      </div> 
+
+      <div class="slideshowpart">
+
+        <div class="slides fade" id="sfd">
+          <div class="text">I love coffee </div>
+        </div> 
+
+         <div class="slides fade" id="sfd">
+          <div class="text">I was a tour-guide in Budapest</div>
+        </div> 
+
+         <div class="slides fade" id="sfd">
+          <div class="text">I played basketball until I left my home country</div>
+        </div> 
+        <script type="text/javascript" src='{{ url_for('static', filename='facts.js') }}'></script> 
+
+      </div> 
+
+
+
+    </div> 
+
+
+
+
+  </div>
+ 
 </div>
 
 

@@ -705,12 +705,11 @@ section #icon-bar li span {
  
 }
 
-
 @media screen and (max-width:1424px){
   .thirdsection p{
     padding-bottom:5%; 
   }
-  
+
   .thirdsection .flourish-embed{
     padding-top:5%; 
     padding-left:5%; 
@@ -742,7 +741,97 @@ section #icon-bar li span {
   padding-top: 80px; 
   padding-bottom: 60px; 
   font-family: 'Nunito', sans-serif;
-  font-size: 10px;
+  font-size: 15px;
+}
+
+.fifthsection h1{ 
+  position: absolute;
+  margin-left: 15%;
+  margin-right: 15%;
+  font-size: 1.8rem;
+  letter-spacing: 3px;
+  top:2%;
+  padding-top:1.5%;
+}
+
+#ffc{
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  margin-left:15%; 
+  margin-right:8%;
+  padding-top: 3%; 
+}
+
+
+#ffc .mepic-box{
+  height: 50vh;
+  width: auto;
+
+}
+
+#ffc .mepic-box img{
+  max-height: 100%; 
+  border-radius: 50%; 
+}
+
+#ffc .arrow-box{
+  position: relative; 
+  width: 17vw; 
+  height: auto;
+}
+#ffc .arrow-box img{
+  max-width: 100%; 
+}
+
+#ffc .facts-box{ 
+  position: relative;
+  width: 40%; 
+}
+
+#ffc .facts-box .staticpart{
+  position: relative; 
+  height: 18%;
+  top:0;
+  background-color: white; 
+}
+#ffc .facts-box .staticpart p{
+  color: black; 
+  font-size: 2.5rem; 
+}
+
+#ffc .slideshowpart{
+  position: relative;
+  top: 20%; 
+}
+
+#sfd .text{ 
+  color: #184b85;
+  font-size: 45px;
+  font-style: italic;
+  padding: 8px 12px;
+  position: relative;
+  bottom: 30%;
+  width: 100%;
+  text-align: center;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
 }
 
 
