@@ -835,4 +835,34 @@ section #icon-bar li span {
 }
 
 
+@media screen and (max-width:1424px){
+  #ffc{
+    display: flex; 
+    flex-direction: column;
+    margin-left: 7%;
+    font-size: -40%;  
+
+  }
+  #ffc .arrow-box{
+    display: none; 
+  }
+  #ffc .mepic-box{
+    padding-bottom: 50px;
+  }
+  #ffc .mepic-box img{
+    padding-left: 10%; 
+  }
+
+  #ffc .facts-box{
+    padding-top:5%; 
+    width: 80vw; 
+    height: 50vh;
+  }
+
+  #ffc .staticpart p{
+    text-align: center;
+  }
+}
+
+
 
