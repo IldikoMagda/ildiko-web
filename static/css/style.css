@@ -864,5 +864,37 @@ section #icon-bar li span {
   }
 }
 
+.comingsoon{
+  width: 100vw; 
+  height: 100vh; 
+  overflow:hidden;
+  overflow-y: hidden;
+}
+.comingsoon img{
+  width:100%;
+  height: 100%; 
+}
+
+@media screen and (max-width:1424px){
+  .med-cont{
+    width: 100vw;
+    background-color: black;
+    height: 100vh;
+
+  }
+  .comingsoon{
+    width: 100vw; 
+    height: auto;
+    overflow: hidden;
+    background-color: rgb(49, 31, 14);
+  }
+  .comingsoon img{
+    width:100%; 
+  }
+ 
+}
+
+
+
 
 
