@@ -1,51 +1,64 @@
 {% extends "menu.html" %}
-
-
 {% block content %}
 
-<h1> This is the Contact page</h1>
-<h2>Contact</h2>
+<div class="contact-section" id="ccs">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    
+    
+    <div class="contacthead">
+        <h1> Feel free to get in touch</h1>
+        <h2>If you have any questions to me or you might think I could help with your project.. Or even if simply you want to chat about science, some data or programming, please don't hesitate to get in touch</h2>
+    </div>
 
-{% if success %}
-<p>Thank you for your message. We'll get back to you shortly.</p>
-{% else %}
+   
+    {% if success %}
+     <div class="submitted">
+        <p>Thank you for your message. I'll get back to you shortly.</p>
+     </div>
 
-    {% for message in form.name.errors %}
-    <div class="flash">{{ message }}</div>
-    {% endfor %}
+    {% else %}
 
-
-    {% for message in form.email.errors %}
+        {% for message in form.name.errors %}
         <div class="flash">{{ message }}</div>
-    {% endfor %}
+        {% endfor %}
 
 
-    {% for message in form.subject.errors %}
-        <div class="flash">{{ message }}</div>
-    {% endfor %}
+        {% for message in form.email.errors %}
+            <div class="flash">{{ message }}</div>
+        {% endfor %}
 
 
-    {% for message in form.message.errors %}
-        <div class="flash">{{ message }}</div>
-    {% endfor %}
+        {% for message in form.subject.errors %}
+            <div class="flash">{{ message }}</div>
+        {% endfor %}
 
-   <form action="{{ url_for('contact.index') }}" method=post>
-    {{ form.hidden_tag() }}
- 
-    {{ form.name.label }}
-    {{ form.name }}
- 
-    {{ form.email.label }}
-    {{ form.email }}
- 
-    {{ form.subject.label }}
-    {{ form.subject }}
- 
-    {{ form.message.label }}
-    {{ form.message }}
- 
-    {{ form.submit }}
-  </form>
-  {% endif %}
+
+        {% for message in form.message.errors %}
+            <div class="flash">{{ message }}</div>
+        {% endfor %}
+
+<div class="form">
+    <form action="{{ url_for('contact.index') }}" method=post>
+        {{ form.hidden_tag() }}
+    
+        {{ form.name.label }}
+        {{ form.name }}
+    
+        {{ form.email.label }}
+        {{ form.email }}
+    
+        {{ form.subject.label }}
+        {{ form.subject }}
+    
+        {{ form.message.label }}
+        {{ form.message }}
+    
+        {{ form.submit }}
+    </form>
+</div>
+    {% endif %}
+</div>
+
 
 {% endblock %}

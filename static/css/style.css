@@ -972,6 +972,40 @@ form input#submit:hover{
   background-color: red;
 }
 
+/*CONTACT PAGE SECTIONS*/
+
+#ccs{
+  background-color: white;
+  position: relative;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding-top: 80px;
+  padding-bottom: 60px;
+  font-family: 'Nunito', sans-serif;
+
+}
+
+#ccs .contacthead{
+  font-size: 1.8rem;
+}
+
+#ccs .contacthead h1{
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+#ccs .contacthead h2{
+  font-size: -50%; 
+  padding-bottom: 50px;
+}
+
+#ccs .form{
+  position: relative;
+  margin-top:5%;
+  margin-left: 30%;
+  margin-right: 20%;
+}
+
 
 
 
