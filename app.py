@@ -1,4 +1,4 @@
-#app.py 
+###app.py ###
 from flask import Flask, render_template
 
 
@@ -6,11 +6,23 @@ from models.about.views import about_blueprint
 from models.interactive.views import interactive_blueprint
 from models.portfolio.views import portfolio_blueprint
 from models.contact.views import contact_blueprint
+from flask_mail import Message, Mail
 
 
+mail = Mail()
 app = Flask(__name__)
+
 app.config.from_object('config')
 
+app.secret_key = 'd3vkey3318'
+ 
+app.config["MAIL_SERVER"] = "smtp.gmail.com"
+app.config["MAIL_PORT"] = 465
+app.config["MAIL_USE_SSL"] = True
+app.config["MAIL_USERNAME"] = 'ildikomagda.web@gmail.com'
+app.config["MAIL_PASSWORD"] = 'devkey2341'
+ 
+mail.init_app(app)
 
 
 @app.route("/")
