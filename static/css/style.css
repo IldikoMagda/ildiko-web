@@ -903,6 +903,7 @@ section #icon-bar li span {
 form label {
   font-size: 1.2em;
   font-weight: bold;
+  color: white;
   display: block;
   padding: 10px 0;
 }
@@ -968,14 +969,14 @@ form input#submit:hover{
   /*background-color: #FBB0B0;*/
   padding: 10px;
   width: 400px;
-  color: #000000;
+  color: black;
   background-color: red;
 }
 
 /*CONTACT PAGE SECTIONS*/
 
 #ccs{
-  background-color: white;
+  background-color: transparent;
   position: relative;
   margin-left: 15%;
   margin-right: 15%;
@@ -985,8 +986,28 @@ form input#submit:hover{
 
 }
 
+.contact-background{
+  position: absolute;
+  z-index: -4;
+  opacity: 0.9;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100vw;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+}
+.contact-background img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
 #ccs .contacthead{
   font-size: 1.8rem;
+  color: white;
+  margin-left:10%;
+  margin-right:15%;
 }
 
 #ccs .contacthead h1{
@@ -995,7 +1016,8 @@ form input#submit:hover{
 }
 
 #ccs .contacthead h2{
-  font-size: -50%; 
+  font-weight: bold;
+  font-size: -60%; 
   padding-bottom: 50px;
 }
 
@@ -1009,6 +1031,16 @@ form input#submit:hover{
 @media screen and (max-width:1424px){
   #ccs .form{
     margin-left:0%;
+    }
+    #ccs .contacthead{
+      font-size: 1.8rem;
+      color: white;
+      margin-left:0%;
+      margin-right:0%;
+      padding-bottom: 2cm;
+    }
+    form label{
+      color: black;
     }
   }
 

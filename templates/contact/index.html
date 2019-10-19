@@ -1,11 +1,14 @@
 {% extends "menu.html" %}
 {% block content %}
 
+<div class="contact-background">
+    <img src={{url_for('static', filename='colorful_smoke.jpg')}} alt="bkgrdpic">
+</div>
+
 <div class="contact-section" id="ccs">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
-    
-    
+        
     <div class="contacthead">
         <h1> Feel free to get in touch</h1>
         <h2>If you have any questions to me or you might think I could help with your project.. Or even if simply you want to chat about science, some data or programming, please don't hesitate to get in touch</h2>
