@@ -1006,6 +1006,12 @@ form input#submit:hover{
   margin-right: 20%;
 }
 
+@media screen and (max-width:1424px){
+  #ccs .form{
+    margin-left:0%;
+    }
+  }
+
 
 
 
