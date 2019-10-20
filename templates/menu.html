@@ -6,6 +6,7 @@
     <title>Ildiko-web</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Amethysta&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway+Dots" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -14,7 +15,7 @@
             <a href= "{{url_for('home')}}">ILDIKO MAGDA</a>
         </div>
         <ul class="nav-links">
-            <li class="active">
+            <li class="active-2">
                 <a href="{{ url_for('about.index')}}">About</a>
             </li>
             <li>
@@ -36,12 +37,41 @@
     </nav>
 
     <script type="text/javascript" src='{{ url_for('static', filename='nav.js') }}'></script>
+<section>
+  <ul id="icon-bar">
+    <li>
+      <div class="facebook">
+        <a href="https://www.facebook.com/ildiko.magda.7">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+        </a>
+      </div>
+      <span>Facebook</span>
+    </li>
+    <li>
+      <div class="linkedin">
+        <a href="https://www.linkedin.com/in/ildiko-magda-294aa0117/">
+          <i class="fa fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </div>
+      <span>LinkedIn</span>
+    </li>
+    <li>
+      <div class="github">
+        <a href="https://github.com/IldikoMagda">
+          <i class="fa fa-github" aria-hidden="true"></i>
+        </a>
+      </div>
+      <span>Github</span>
+    </li>
+  </ul>
+</section>
 
 </body>
 
+
+
+
 {% block content %}
-
-
 {% endblock %}
 
 <p class="footer"> Designed by Ildiko Magda 2019</p>

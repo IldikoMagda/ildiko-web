@@ -3,6 +3,113 @@
 
 {% block content %}
 
-<h1> This is the portfolio page</h1>
+<div class="header_slideshow-container" id="hsc">
+
+    <div class="slidesreviews">
+       <q>Ildiko showed excellent performance, initiative and ability to contribute to the study.
+       She engaded with other lab members during the meetings and showed great capacity of programming independently.
+       She conducted a complex project in which she learned a number of high-level skills not only in machine learning but also 
+       processing of EEG signals, showing great ability of self-directed learning and research</q>
+        <p class="author">- Dissertation Supervisor</p>
+    </div>
+    <div class="slidesreviews">
+       <q>Review number 1</q>
+        <p class="author">- review author</p>
+    </div>
+
+    <div class="slidesreviews">
+       <q>Review number 1</q>
+        <p class="author">- review author</p>
+    </div>
+      <!-- Next/prev buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+    <!-- Dots/bullets/indicators -->
+    <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("slidesreviews");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+
+<div class="portfolio-container">
+
+    <div class="each-container">
+        <div class="eachpic-box">
+            <img src="#" alt="pic1">
+        </div>
+
+        <div class="eachtext-box">
+            <p>This is a description of a project</p>
+            <button>Read More </button>
+        </div>
+    </div>
+
+    <div class="each-container">
+        <div class="eachpic-box">
+            <img src="#" alt="pic1">
+        </div>
+
+        <div class="eachtext-box">
+            <p>This is a description of a project</p>
+            <button>Read More </button>
+        </div>
+    </div>
+
+    <div class="each-container">
+        <div class="eachpic-box">
+            <img src="#" alt="pic1">
+        </div>
+
+        <div class="eachtext-box">
+            <p>This is a description of a project</p>
+            <button>Read More </button>
+        </div>
+    </div>
+
+    <div class="each-container">
+        <div class="eachpic-box">
+            <img src="#" alt="pic1">
+        </div>
+
+        <div class="eachtext-box">
+            <p>This is a description of a project</p>
+            <button>Read More </button>
+        </div>
+    </div>
+
+</div>
+
+
 
 {% endblock %}
