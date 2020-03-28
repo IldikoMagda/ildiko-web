@@ -32,3 +32,4 @@ venv
 **/*.pyc
 **/lib/
 /lib/*
+/home/ildiko/Desktop/ildiko-web/ildiko-web

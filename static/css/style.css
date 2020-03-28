@@ -1124,5 +1124,57 @@ q {font-style: italic;}
 .author {color: cornflowerblue;}
 
 
+.portfolio-container{
+  background-color: transparent;
+  position: relative;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding-top: 80px;
+  padding-bottom: 60px;
+  font-family: 'Nunito', sans-serif;
+
+}
+
+.each-container{
+  display: flex;
+  flex-direction: row;
+  /*background-color: red;*/
+}
+
+.eachpic-box{
+  position: relative;
+  margin-left: 5%;
+  /*background-color: yellow;*/
+  width: 18vw;
+  height: 28vh;
+}
+
+.eachtext-box{
+  padding:2%;
+  /*background-color: grey;*/
+  width: 45vw;
+  line-height: 20px;
+}
+
+.eachtext-box h1{
+  height: 40px;
+  font-size: 20px;
+  background-color: white;
+  padding-bottom: 2%;
+}
+
+.eachtext-box p{
+  position: relative;
+  height: 140px;
+}
+
+.eachpic-box img{
+  padding-top: 10%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+
 
 
