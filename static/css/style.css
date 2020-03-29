@@ -1175,6 +1175,41 @@ q {font-style: italic;}
   object-fit: contain;
 }
 
+@media screen and (max-width:1424px){
+  .portfolio-container{
+    margin-left: 5%;
+    margin-right: 3%;
+  }
+  .eachtext-box{
+    height: 150%;
+    padding: 1.5%;
+    width: 111%;
+  }
+  .eachpic-box{
+    width: 54%;
+    margin-left: 0;
+  }
+
+}
+@media screen and (max-width:768px){
+  .portfolio-container{
+    margin-left: 3%; 
+    margin-right: 2%;
+    }
+  .eachpic-box{
+    visibility: hidden;
+    width: 0;
+
+   }
+   .eachtext-box{
+     height: 40vh;
+   }
+   .eachtext-box p{
+     padding-top: 2%;
+     height: 200px;
+   }
+  }
+
 
 
 
