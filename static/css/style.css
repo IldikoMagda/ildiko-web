@@ -1262,6 +1262,7 @@ background-color: transparent;
 .img-cont2 img{
   height: 99%;
   width: 100%;
+  max-width: 100%;
 }
 
 .img-cont21{
