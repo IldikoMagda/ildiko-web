@@ -2,6 +2,127 @@
 
 
 {% block content %}
-<p>MP </p>
 
+<div class="project-cont">
+    <div class="Title">
+        <h1>Predicting working memory failure using machine learning</h1>
+    </div>
+    <div class="Body">
+
+
+        <p>
+This project was my dissertation at the end of masters degree and I worked on this for approximately 6 months. 
+        </p>
+<h1>The Experiment and The Data </h1>
+
+    <div class="img-cont21">
+        <img src="{{url_for("static", filename="forget.png")}}" alt="MLpic" >
+    </div>
+<p>
+    I worked with data that was recorded in an experiment a year before. In this experiment our volunteers were shown  a series of numbers between 1 and 9, which hey had to correctly remember  few seconds after. Each time they got it right, the next round they got one more digit to memorize. Each round the sequence of numbers were different. This meant even if the person remembered correctly, the next sequence will have an entirely different series of numbers, but with an extra digit. If the person didn’t remember correctly the sequence, the next sequence was a digit shorter this time. And of course, the person just kept repeating this for 20 minutes :) Such a full on brain training! 
+    This way we could record each person’s working memory in action. 
+</p>
+    <div class="img-cont2">
+        <img src="{{url_for("static", filename="eeg.jpg")}}" alt="MLpic" >
+    </div>
+<p>
+    This type of memory is like the RAM in our computer, unlikely to keep information really long, but very effective in many parts of our life, such as taking part in reasoning, decision making and learning.
+</p>
+
+<p>
+     To caption this we used EEG recording, which measures electrical activity around specific neural areas. This electric activity produces beautiful brain waves that everyone most likely come across in sleep studies. Other studies had previously suggested some types of waves might have a larger impact on whether someone is about to forget or retain information in their working memory.
+</p>
+
+
+<p>
+67 females and 63 males participated in the experiment (total of 130), with an age spanning between 18 and 32 and their EEG was recorded with 17 electrodes.
+</p>
+
+    <div class="img-cont1">
+        <img src="{{url_for("static", filename="waves.PNG")}}" alt="ML" >
+    </div>
+
+<h1>
+The Bioinformatics and Results 
+</h1>
+
+<p>
+I worked with MATLAB and many many standard EEG analysis tools throughout this project. I mainly used Matplotlib later visualise my results. Now instead of describing my code, let me tell you the logic that behind the machine learning approaches I used. I thought these were some really ‘cool’ ideas and maybe applicaple to other classification projects! 
+
+The main machine learning algorithm in this experiment is a k-nearest neighbour algorithm. The variations of this algorithm were explored throughout the experiment in order to find the most successful classifier. 
+KNN is one of the simplest, yet stable classification method that competes with algorithms with more complexity. Despite its simplicity, KNN is reported to be successful on high-level classification tasks.
+KNN is a non-parametric supervised algorithm. KNN is often referred as a ‘lazy’ algorithm as it simply uses the similarity between k number of labelled datapoint surrounding the unlabelled datapoints for prediction. 
+This means that the algorithm simply ‘remembers’ the training instances and predictions are made by comparing the prediction datapoint to the known training instances.
+
+</p>
+
+
+    <div class="img-cont3">
+        <img src="{{url_for("static", filename="KNNexplained.PNG")}}" alt="ML" >
+    </div> 
+<p>
+The k in kNN is the parameter that determines how many nearest training points are involved in prediction. If k is 10, the prediction of any datapoint will happen by finding the 10 nearest ‘neighbours’ to this point from the training datapoints (various distance measures can also be used to determine which points are the nearest ‘neighbours’). Then the prediction datapoint’s class is determined by majority voting.
+If most of the surrounding training data points belong to one class, the algorithm will predict that class. In binary classification therefore, it’s possible to have a tie between voting if the k parameter is an even number. As parameter k can be set to various integers, the decision boundary of this algorithm is very flexible. Both smooth, almost linear edges can be achieved, as well as fine, rough decision boundaries.
+Generally, the lower parameter k is, the decision boundary is finer, while a higher k would indicate a decision boundary with a smoother edge.
+</p>
+
+<h1>Random Subspace Ensemble Approach </h1>
+
+<p>
+Because a lower feature space might benefit this algorithm, to reduce dimensionality I used  a random subspace ensemble (RSE) with KNN ‘base’ or ‘weak’ learners.
+RSE machine learning approach was designed for high dimensional data; therefore, it was expected to be less influenced by the ‘noisy’ nature of EEG data. An RSE is based on three key steps; random feature selection, random subspace classification, and final classification. The algorithm is trained by several learning cycles, or subspaces, and during each cycle, a prior classification is completed with the randomly selected features only. 
+These subspaces apply a base or ‘weak’ classification on the entire training dataset, but at each learning cycle only randomly selected features.
+This experiment used KNN as a base learner. This means that at each learning cycle, random features are selected as the ‘knowledge’ of the algorithm. Prediction datapoints are classified with the prior described KNN method, but only with these selected features. 
+</p>
+
+
+    <div class="img-cont4">
+        <img src="{{url_for("static", filename="rsemethodexplained.png")}}" alt="ML" height="300" width="600" >
+    </div>
+
+<p>
+Each subspaces’ classification result counts towards the learning curve for the final trained model which is used for prediction.
+Therefore, the same prediction trial will be classified multiple times (as many times as learning cycles run) and decision is made again by majority voting. The ideas described are summarized on the diagram above.
+Interpretation of the key driving features by the RSE is challenging, as features are picked at random with replacement, and the algorithm is not influenced by the weak classification outcomes, therefore, each feature is chosen equally throughout the learning. This can lead to a better classification accuracy but a more difficult interpretability.  These computational approaches were novel in WM research and I believe it was a great success. 
+</p>
+
+<h1>Summary of the results </h1>
+
+<p>
+When looking at the overall classification accuracy, a higher overall classification accuracy was achieved with RSE on every frequency power dataset. The best KNN classification was achieved with the alpha and the beta dataset, closely reaching the accuracy of the ensemble method, with 67.5 and 67.1 per cent overall classification accuracy. 
+</p>
+<div class="img-cont8">
+        <img src="{{url_for("static", filename="tablazatkuld.PNG")}}" alt="ML" >
+</div>
+
+<p>
+Although RSE achieves better overall classification results, KNN classification accuracies outperforms RSE five out of six datasets when predictions are made on remembered items. KNN overall classification accuracies are consistently worse as a result of the worse classifications achieved on the not remembered items. 
+The following table summarizes the correctly classified groups across classification methods.
+
+</p>
+   
+<p>
+This table and more detailed results can be found in my dissertation.
+I also added some Theta band’s classification results, to represent the type of data visualisation I chose for my classification.
+</p>    
+
+    <div class="img-cont5">
+        <img src="{{url_for("static", filename="thetabestfeatures.png")}}" alt="ML" >
+        <img src="{{url_for("static", filename="thetallfeatures.png")}}" alt="ML" >
+        <img src="{{url_for("static", filename="ThetaCompares.png")}}" alt="ML" >
+
+    </div>
+
+<p>    
+Thank you for reading about my project, I hope you found it interesting science! If you need a bit more science and detail, or you wish to read about the sources and references I used in this project, please download my dissertaion. 
+</p>
+
+    </div>
+    <div class="download-box">
+        <div class="download">
+        <a href="#"><button type="button">Download My Dissertation</button></a>
+        </div>
+    </div>
+
+</div>
 {% endblock %}
