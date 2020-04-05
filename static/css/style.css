@@ -1341,5 +1341,52 @@ overflow-x: hidden;
   max-width: 30%;
 }
 
+@media screen and (max-width:1440px){
+  .project-cont{
+    margin-left: 3%;
+    margin-right: 2%;
+  }
+  .Title{
+    width: 80%;
+    height: 30%;
+    margin-bottom: 0%;
+  }
+  .Title h1{
+    object-fit: contain;
+    font-size: 200%;
+  }
+  .Body h1{
+    font-size: 130%;
+  }
+  .img-cont21{
+    width: 90%;
+  }
+  .img-cont2{
+    width: 40%;
+    height: 40%;
+  }
+  .img-cont1{
+    width: 30%;
+  }
+  .img-cont3{
+    width: 80%;
+    margin-left: 17%;
+  }
+  .img-cont4{
+    width: 80%;
+    margin-left: 5%;
+  }
+  .img-cont4 img{
+    width: 100%;
+  }
+  .img-cont8{
+    width: 90%;
+  }
+  .img-cont5{
+    width: 100%;
+    height: 140%;
+  }
+}
+
 
 
