@@ -8,7 +8,7 @@ __author__ = 'Ildiko'
 portfolio_blueprint = Blueprint('portfolio', __name__)
 
 #contains abs path to uploaded file
-STATIC_FOLDER = config.UPLOAD_FOLDER
+STATIC_FOLDER = config.STATIC_FOLDER
 
 @portfolio_blueprint.route('/', methods=['GET'])
 def index(): 
