@@ -7,7 +7,7 @@ import os
 
 portfolio_blueprint = Blueprint('portfolio', __name__)
 
-FOLDER = config.STATIC_FOLDER
+
 
 @portfolio_blueprint.route('/', methods=['GET'])
 def index(): 
