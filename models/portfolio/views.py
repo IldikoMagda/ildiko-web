@@ -2,7 +2,6 @@ from flask import Blueprint, render_template, send_file, send_from_directory
 
 __author__ = 'Ildiko'
 
-import config
 import os
 
 portfolio_blueprint = Blueprint('portfolio', __name__)
