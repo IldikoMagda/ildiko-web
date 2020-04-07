@@ -29,10 +29,10 @@ def download():
         path = os.path.join(root_dir, 'static')
         print(path)
         print(root_dir)
-        return send_from_directory(path, filename='dissertation.docx')
+        #return send_from_directory(path, filename='dissertation.docx')
 
-        #file= os.path.join(FOLDER, 'dissertation.docx')
-        #return send_file(file, attachment_filename="IldikoMagdaDissertation")
+        file= os.path.join(path, 'dissertation.docx')
+        return send_file(file, attachment_filename="IldikoMagdaDissertation")
         #return send_file('FutureDissertationnewresults.docx',mimetype='docx',as_attachment=True,attachment_filename='IldikoMagdaBioinf')
         #return send_from_directory('dissertation.docx', FOLDER, as_attachement=True)
         #return print(file)
