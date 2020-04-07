@@ -120,7 +120,10 @@ Thank you for reading about my project, I hope you found it interesting science!
     </div>
     <div class="download-box">
         <div class="download">
-        <a href="#"><button type="button">Download My Dissertation</button></a>
+
+        <form method="GET" action= {{url_for('portfolio.download') }} >
+        <button type="submit" name= "Download">Download My Dissertation</button>
+        </form>
         </div>
     </div>
 
