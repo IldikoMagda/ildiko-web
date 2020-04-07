@@ -28,7 +28,7 @@ def webapp():
 def download():
     try:
         root_dir = os.path.dirname(os.getcwd())
-        path = os.path.join(root_dir, 'ildiko-web', 'static')
+        path = os.path.join(root_dir, 'static')
         print(path)
         print(root_dir)
         return send_from_directory(path, filename='dissertation.docx')
