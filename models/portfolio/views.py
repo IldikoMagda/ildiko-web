@@ -1,11 +1,14 @@
 from flask import Blueprint, render_template, send_file, send_from_directory
+import config
+import os
 
 __author__ = 'Ildiko'
 
-import os
 
 portfolio_blueprint = Blueprint('portfolio', __name__)
 
+#contains abs path to uploaded file
+STATIC_FOLDER = config.UPLOAD_FOLDER
 
 @portfolio_blueprint.route('/', methods=['GET'])
 def index(): 
@@ -25,20 +28,16 @@ def webapp():
 @portfolio_blueprint.route('portfolio/download', methods=['GET'])
 def download():
     try:
-        root_dir = os.path.dirname(os.getcwd())
-        path = os.path.join(root_dir, 'static')
-        print(path)
-        print(root_dir)
-        #return send_from_directory(path, filename='dissertation.docx')
+        return send_from_directory(STATIC_FOLDER, 'dissertation.docx', as_attachment=True)
 
-        file= os.path.join(path, 'dissertation.docx')
-        return send_file(file, attachment_filename="IldikoMagdaDissertation")
+        # file= os.path.join(path, 'dissertation.docx')
+        # return send_file(file, as_attachement= True, attachment_filename="IldikoMagdaDissertation")
         #return send_file('FutureDissertationnewresults.docx',mimetype='docx',as_attachment=True,attachment_filename='IldikoMagdaBioinf')
         #return send_from_directory('dissertation.docx', FOLDER, as_attachement=True)
         #return print(file)
     
     except Exception as e:
-        return str(e) and str(path)
+        return str(e) and str(STATIC_FOLDER)
 
 @portfolio_blueprint.route('/Website', methods=['GET'])
 def website(): 
