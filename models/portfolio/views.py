@@ -28,14 +28,7 @@ def webapp():
 @portfolio_blueprint.route('portfolio/download', methods=['GET'])
 def download():
     try:
-        return send_from_directory(STATIC_FOLDER, 'dissertation.docx', as_attachment=True)
-
-        # file= os.path.join(path, 'dissertation.docx')
-        # return send_file(file, as_attachement= True, attachment_filename="IldikoMagdaDissertation")
-        #return send_file('FutureDissertationnewresults.docx',mimetype='docx',as_attachment=True,attachment_filename='IldikoMagdaBioinf')
-        #return send_from_directory('dissertation.docx', FOLDER, as_attachement=True)
-        #return print(file)
-    
+        return send_from_directory(STATIC_FOLDER, 'IldikoMagda_BioinformaticsDissertation.pdf', as_attachment=True)
     except Exception as e:
         return str(e) and str(STATIC_FOLDER)
 
