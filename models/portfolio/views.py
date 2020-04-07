@@ -7,7 +7,6 @@ import os
 portfolio_blueprint = Blueprint('portfolio', __name__)
 
 
-
 @portfolio_blueprint.route('/', methods=['GET'])
 def index(): 
 
@@ -39,7 +38,7 @@ def download():
         #return print(file)
     
     except Exception as e:
-        return str(e, root_dir, path)
+        return str(e) and str(path)
 
 @portfolio_blueprint.route('/Website', methods=['GET'])
 def website(): 
