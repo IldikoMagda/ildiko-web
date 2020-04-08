@@ -648,16 +648,16 @@ section #icon-bar li span {
   justify-content: space-around;
   margin-left: 13%; 
   margin-right: 15%;
-  padding-top: 45px; 
-  width: 80vw; 
-  height: 28 vh; 
+  padding-top: 1%; 
+  width: 80%; 
+  height: 25%; 
 
 }
 .projectpic-container .picbox{
   position: relative;
-  width: 400px; 
-  height: 255px; 
-  margin: 8px; 
+  width: 400px;
+  margin-right:2%;
+  margin-bottom:2%;
 }
 
 .projectpic-container .picbox .imgBox{
@@ -684,25 +684,25 @@ section #icon-bar li span {
 
 
 .projectname-container{
-  display: flex;
+  display:flex;
   flex-direction: row;
-  margin-left:15%; 
+  width: 80%;
+  height: 5%;
+  margin-left: 15%;
   margin-right:8%; 
   padding-bottom: 2%;
-  top: 10%;
+  top: 0%;
 }
 
 .projectname-container .namebox{
-  position: relative;
-  width: 28%; 
-  height: 10%; 
-  padding-right: 10%; 
-  justify-content: space-around;
+  object-fit: contain;
+  width: 23%;
+  margin-right:9%;
   text-align: center;
+  height: 100%;
 }
 
-.projectname-container .namebox a{
-  position: relative; 
+.projectname-container .namebox a{ 
   font-size: 1.5rem;
   text-decoration: none;
   color: black;
