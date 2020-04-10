@@ -47,10 +47,6 @@ table {
 	border-spacing: 0;
 }
 
-
-
-
-
 *{
   margin: 0px;
   padding: 0%;
@@ -1225,8 +1221,8 @@ q {font-style: italic;}
 }
 
 .Title{
-  height: 10vh;
-  width: 70vw;
+  height: 10%;
+  width: 70%;
   padding: 20px;
   margin-bottom: 2.5vh;
 }
@@ -1387,6 +1383,82 @@ overflow-x: hidden;
     height: 140%;
   }
 }
+/* PORTFOLIO/WEBAPP ROUTE */
 
+.mainbox{
+  background-color: transparent;
+  margin-left: 10%;
+  margin-right: 8%;
+  padding-top: 80px;
+  padding-bottom: 60px;
+  font-family: 'Nunito', sans-serif;
+}
+.webapp-title{
+  height: 10%;
+  width: 70%;
+  padding: 20px;
+  margin-bottom: 2.5vh;
+}
+.webapp-title h1{
+  font-size: 35px;
+  font-weight: bold;
+}
+#B p{
+  padding: 20px;
+  font-size: 17px;
+  line-height: 35px;
+}
 
-
+#B h1{
+  padding: 20px;
+  font-weight: 700;
+}
+#P1{
+  width: 90%;
+  height: 35%;
+  overflow: auto;
+}
+#P1 img{
+  object-fit: contain;
+  max-width: 100%;
+}
+.quote{
+  background-color: rgb(247, 197, 164);
+  width: 85%;
+  margin-top: 3%;
+  margin-left:3%;
+  margin-bottom: 4%;
+  border-width: 3px;
+    border-style: solid;
+    -webkit-border-image: 
+    -webkit-gradient(linear, 0 0, 0 100%, from(rgb(119, 84, 18)), to(rgba(0, 0, 0, 0))) 1 100%;
+    -webkit-border-image: 
+      -webkit-linear-gradient(rgb(119, 84, 18), rgba(0, 0, 0, 0)) 1 100%;
+    -moz-border-image:
+      -moz-linear-gradient(rgb(119, 84, 18), rgba(0, 0, 0, 0)) 1 100%;    
+    -o-border-image:
+      -o-linear-gradient(rgb(119, 84, 18), rgba(0, 0, 0, 0)) 1 100%;
+    border-image:
+      linear-gradient(to bottom,rgb(119, 84, 18), rgba(0, 0, 0, 0)) 1 100%;
+}
+#P2 {
+  width:55%;
+  height:50%;
+  overflow: auto;
+  float: left;
+}
+#P2 img{
+  object-fit: contain;
+  max-width: 100%;
+}
+#B a{
+  color: red;
+  text-decoration: none;
+}
+#B a:hover{
+  text-decoration: underline;
+  color: #46c4f7;
+}
+#B a:visited{
+  color: purple;
+}

@@ -2,6 +2,71 @@
 
 
 {% block content %}
-<p>MP </p>
 
+<div class="mainbox">
+
+    <div class="webapp-title">
+        <h1>Bioinformatics Kinase Database Web Application </h1>
+
+    </div>
+
+    <div class="webapp-body" id="B">
+        <p>I worked on this project for approximately two months as a part of my masters degree. I was in a group of 4 bioinformaticians. 
+        Our goal was to create a database and webapplication with very limited time on hand, with various specification. 
+        This project was a very typical bioinformatics problem with plenty of data handling. This is a snippet of what it looked like
+        </p>
+            <div class="webapp-pic1" id="P1">
+                <img src="{{url_for("static", filename="kellerman.png")}}" alt="webapp" >
+            </div>
+
+        <h1>Overview </h1>
+
+        <p>Although we had to follow various specifications (user interactions, minimum requirements etc.) about our application, but the technological tools were completely our choices. Just to give a brief overview of this project, let me quote the overview of our app's documentation.</p>
+        <div class="quote">
+           <p> "The Kellerman Kinase application is an interactive searchable database. It provides the user with
+background information about protein kinases such as their gene name, the families they belong to,
+the subcellular location and their target phosphorylation sites. As well as target phosphorylation sites
+it also provides the user with the genomic location and neighbouring sequences of their respective
+phosphosites. Inhibitor information for each kinase is retrieved and this database allows you to search
+known inhibitors on the inhibitor page, displaying their name, chemical structure and respective
+kinase they are known to inhibit. Furthermore, this database contains an analysis section allowing the
+user to upload their own phosphoproteomics data. The analysis section calculates and graphically
+presents the relative activity of each kinase in the sample data.
+The protein kinase and phosphosite data was collected through UniProt and BiomaRt APIs and
+inhibitor data was collected from the MRC Interational Center of Kinase Profiling. The collected data
+was populated into a PostgreSQL database in PgAdmin4. The application itself was built through Flask
+in Python 2.7 and was deployed using Heroku which is a cloud-based development platform as service
+(PaaS). This platform provides cloud-based recovery and back-up options. It allows a consistent and
+continuous GitHub integration, while the infrastructure is handled by Heroku itself. This means that
+deployment of a new version is achieved by a GitHub push. There is no need to change infrastructure
+settings on Heroku. Heroku allows horizontal, vertical or automatic scaling which allows the user to
+use as much resources as needed for the application. Database configuration, and add-on
+management is generally a single line command or a ‘click’ on the dashboard, without having to
+configure anything else. Heroku is set up to be able to deploy rapidly and efficiently. Our goal was to
+develop the app continuously, therefore the ease of deployment was our driving reason when
+choosing a deployment platform. Heroku’s official database recommendation is PostgreSQL. Heroku
+Postgres database is fully supported, managed and developed to be fully integrated into the Heroku
+platform. To set up a PostgreSQL database on Heroku is extremely easy and yet highly maintained and
+secure. All Heroku supported languages allow easy access to the database (Ruby, Java, PHP, Python,
+Node, Go, Scala and Clojure). Heroku allows forking on databases and let users to be read only
+followers of a database. The database is constantly monitored for protection and health checks. Using
+this system allows full recovery of the database in an event of hardware failure."
+       </p>
+        </div>
+    <h1> Our Collaboration Method and My Role</h1>
+        <p>We decided from the beginning to divide tasks between all of us. I think we believed that we all should have accountability and responsibility of our own work, which meant we could work on our own and if we got stuck we then started to discuss the issue as a team. 
+        Looking back from now, the only problem was that we had no idea of the weight and difficulty of each segment of the project.
+        </p>
+            <div class="webapp-pi2" id="P2">
+                <img src="{{url_for("static", filename="collabor.jpg")}}" alt="collaboration-pic" >
+            </div>
+        <p>
+         So we went with 'logic' and divided our task into 2 people working on the backend and 2 people working on the frontend developing. In reality, I was somewhere inbetween. 
+        Two of my colleuges were working on the data collection and database creation. As mentioned above, we used SQL and various APIs to get our own database. One of us was responsible for all the visual aspects of the user interface, while I was working on the foundations of our application. I connected the frontend with the backend. I handled our git and deployment issues, including reversions and crash investigations. 
+        I implemented both backend and frontend code into the deployed application, which was a python-flask based software.
+        </p>
+    <h1> Skills I gained</h1>
+    <p> As a summary, let me list the technologies I become familiar with as a result of this project. I improved my Python skills, mastered Flask, got familiar with cloud based web applications, HTML, SQL, CSS, various APIs and most importantly, how people think so differently about how to approach the same problem. Although, the web app no longer exists, please do check out my github <a href="https://github.com/IldikoMagda/kellerman">here</a> to see our coding solutions! 
+    </p>
+</div>
 {% endblock %}
