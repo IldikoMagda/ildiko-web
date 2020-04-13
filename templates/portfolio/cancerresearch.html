@@ -2,6 +2,65 @@
 
 
 {% block content %}
-<p>MP </p>
+<div class="mainbox">
+    <div class="web-title">
+        <h1> Investigation of Wnt-11 on JNK signalling pathway and differentiation process in prostate cancer</h1>
+    </div>
+
+    <div class= "web-body" id="B">
+
+        <p>I did this project in 2016. This project was a funded Wellcome Trust project whilst I was doing my bachelor’s degree.
+         Feels like a long time now. </p>
+
+        <h1> Overview</h1>
+
+        <p>This research’s aim was to narrow down the precise molecular mechanism behind prostate cancer. As my supervisor previously shown that Wnt-11, a protein in cells, negatively affects prostate cancer cells’ faith, cells become more aggressive and do not respond to general cancer therapy anymore.
+    To understand how is this possible, it was hypothesized that Wnt-11 requires other participants, proteins, in the cell in order to be able to trigger these responses. 
+    </p>
+        <div class="cancerpic1" id="C1">
+                <img src="{{url_for("static", filename="CellCulture.jpg")}}" alt="cultures" >
+        </div>
+
+    <p>
+    In this study, a possible candidate, c-jun kinase (JNK) was at glance.
+    As in this experiment, JNK was unavailable for the cells and that resulted in similar results as when Wnt networks, thus the dysregulation of the pathway can lead to cancer, inflammatory and neurodegenerative diseases. 
+    Biochemical ‘activation’ of this protein, JNK phosphorylation, can affects many other proteins and downstream targets such as transcription factors like; AP-1, ATF-2, Stat3.
+    The role of this cascade in tumour formation is controversial; there is evidence both about its role in cell death and also about its involvement in cell survival mechanisms. 
+    Studies suggest that in PCa, both Wnt-11 and JNK levels are elevated, and this process might be linked. The aim of the project was to find out whether JNK and Wnt signalling is linked, and part of neuronal differentiation processes.</p>
+
+        <h1> Research</h1>
+
+        <p>Prostate cancer (PCa) is the leading cancer type among men. In PCa, malignant tumours arise from epithelial cells that form glandular structures within the tissue. 
+        In most cases, these cancerous cells are hormone (androgen) dependent and the absence of this hormone delay or block further tumour progression. 
+        </p>
+            <div class="cancerpic3" id="C3">
+                <img src="{{url_for("static", filename="PC3_cell.jpg")}}" alt="cellline" >
+            </div>
+        <p>
+        A more aggressive variant of PCa affects neuroendocrine cells or cell that undergo neuronal differentiation and these cells do not respond well to androgen ablation therapy.
+        To find out how JNK signalling affected the Wnt-11 cascade, aggressive prostate cancer cell lines were treated with JNK inhibitor for either 24 or 48 hours. </p>
+        <p>
+        This cell lines, called PC3 cell lines, helps us to learn more about some of the most agressive forms of prostate cancer. 
+
+        We selected 6 neuronal marker genes to see any resulting change in their expression as a result of this treatment. 
+        Let me show you the summary table I made at the time. </p>
+        
+            <div class="cancerpic2" id="C2">
+                <img src="{{url_for("static", filename="prtable.PNG")}}" alt="resulttable" >
+            </div>
+        
+        <p>The first column of each neural marker gene is our baseline, meaning that I compared gene expression to that level. 
+        These were the cell lines without any treatment. As you may see JNK inhibition resulted in various gene expression changes. Interestingly, the inhibition of JNK cascade resulted in a decrease in Wnt-11 expression (Last neuronal marker on the table), while others have increased, supporting our theory. 
+        Also, those cells that were incubated with the inhibitor longer, had tended to show less decrease in gene expression which could mean the use of another alternative pathway if one is unavailable, or could represent rate of the inhibitor usage in this cell line. 
+        This result suggested that both JNK and Wnt-11are participating in this process, where cells change their properties and become more damaging to a healthy person. 
+        We believed that targeting these elements of prostate cancer will positively contribute to drug developments.</p>
+
+        <h1> What I learned</h1>
+
+        <p>Undoubtedly, the most valuable achievement personally for me was that I gained great amount laboratory experience; I improved many of my existing skills and developed some that I never had before. I know that this approach led me to finish the research with a good practical knowledge of cell culturing, q-PCR and in situ hybridisation and even cell block preparation. 
+        Without these lab skills I probably wouldn’t fully understand the ‘messy’ nature of biomedical data. I could participate in multiple scientific projects, I was involved in scientific seminars, and on a daily base I was supervised by experienced lecturers who taught me both basic laboratory techniques and advanced molecular biology tools that are extremely useful in biomedicine. </p>    
+
+    </div>
+</div>
 
 {% endblock %}
