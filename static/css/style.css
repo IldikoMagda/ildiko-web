@@ -523,6 +523,18 @@ section #icon-bar li span {
     align-items: center;
 
   }
+  .aboutme{
+    margin-left:3%;
+    margin-right:8%;
+  }
+
+  .aboutme h1{
+    margin-left:13%;
+  }
+  .aboutme p{
+    font-size: 16px;
+    line-height: 1.0;
+  }
   }
 
 .thirdsection{
