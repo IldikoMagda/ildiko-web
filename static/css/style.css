@@ -245,6 +245,11 @@ z-index: 2000;
 
 }
 
+.background #text{
+  visibility: hidden;
+  display: none;
+}
+
 .body{
   margin:0;
   font-size: 1rem;
