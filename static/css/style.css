@@ -81,7 +81,28 @@ z-index: 2000;
 .logo a{
   text-decoration: none;
   color: rgb(228, 250, 249);
+  color: transparent;
+  background-image: linear-gradient(to top right, rgb(147, 231, 246) 0%, rgba(118, 87, 202, 0.8) 45%, rgba(248, 85, 10, 0.575) 70%);
+  -webkit-background-clip: text;
+  animation: animate 20s linear infinite;
+  background-size: 1000%;
 }
+@keyframes animate{
+  0%
+  {
+    background-position: 0% 100%;
+  }
+  50%
+  {
+    background-position: 100% 0%;
+  }
+  100%
+  {
+    background-position: 0% 100%;
+  }
+}
+
+
 
 .nav-links{
     color: rgb(228, 250, 249);
