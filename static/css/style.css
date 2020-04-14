@@ -147,6 +147,13 @@ z-index: 2000;
 .content{
   display: none;
 }
+.logo{
+  margin-left: 7%;
+  max-width: 20%;
+}
+.logo a{
+  font-size: 25px;
+}
 
 }
 
@@ -317,98 +324,7 @@ z-index: 2000;
 }
 
 /* ABOUT HEADER*/
-.header{
-  height: 70vh;
-  width: 100vw;
-  background: rgb(0, 0, 0);
-  overflow: hidden;
-  overflow-x: hidden;
 
-  
-}
-#bubble{
-  position: relative;
-  display: block;
-  margin-left: auto;
-  margin-right:auto;
-  height:70vh;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  overflow-x: hidden;
- 
-}
-.motto-above{
-  position: absolute;
-  margin-bottom: 100px;
-  top: 25%; 
-  left: 3vw;
-  font-size: 50px;
-  
-}
-.motto-above p{
-  position: relative;
-  left: 1vw;
-  top: 13vh;
-  
-  font-family: 'Tangerine', cursive;
-  color: transparent;
-  z-index: 2;
-  letter-spacing: 4px;
-  word-spacing: 3px;
-  line-height: 1.5;
-  background-image: linear-gradient(to top right, rgb(147, 231, 246) 0%, rgba(118, 87, 202, 0.8) 45%, rgba(248, 85, 10, 0.575) 70%);
-  -webkit-background-clip: text;
-  animation: animate 20s linear infinite;
-  background-size: 1000%;
-}
-
-@keyframes animate{
-  0%
-  {
-    background-position: 0% 100%;
-  }
-  50%
-  {
-    background-position: 100% 0%;
-  }
-  100%
-  {
-    background-position: 0% 100%;
-  }
-}
-@media screen and (max-width:768px){
-  section{
-    display: none;
-  }
-  #bubble{
-    display: none;
-
-  }
-}
-@media screen and (max-width:1424px){
-  .motto-above{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    bottom: 0 vh;
-    left: 10px;
-    bottom:0;
-    top: 40%;  
-    
-  }
-  .motto-above p{
-    position: relative;
-    justify-content: space-around;
-    display: inline-block;
-    font-size: 40px;
-
-    
-  }
-  #bubble{
-    display: block;
-  }
-}
 
 /*SOCIAL ICONS */
 section{
@@ -517,8 +433,8 @@ section #icon-bar li span {
   position: relative;
   margin-left: 0%;
   margin-right: 0%;
-  padding-top: 80px;
-  padding-bottom: 60px;
+  padding-top: 10px;
+  padding-bottom: 30px;
   font-family: 'Nunito', sans-serif;
   z-index: -2;
   font-size: 10px;
@@ -717,6 +633,16 @@ section #icon-bar li span {
   opacity: 0.85;
  
 }
+@media screen and (max-width:1024px){
+  .projectname-container{
+    margin-left: 15%;
+    margin-top:2%;
+    margin-right: 3%;
+  }
+  .projectname-container .namebox{
+    max-width: 18%;
+  }
+}
 
 @media screen and (max-width:1424px){
   .thirdsection p{
@@ -746,7 +672,6 @@ section #icon-bar li span {
   }
 
 }
-
 
 .fifthsection{
   background-color: white;
@@ -1064,6 +989,7 @@ form input#submit:hover{
 #hsc{
   position: relative;
   background: rgb(247, 197, 164);
+  max-height: 30%;
 }
 
 /* Slides */
@@ -1124,11 +1050,8 @@ form input#submit:hover{
 .active, .dot:hover {
   background-color: #717171;
 }
-
-/* Add an italic font style to all quotes */
 q {font-style: italic;}
 
-/* Add a blue color to the author */
 .author {color: cornflowerblue;}
 
 
