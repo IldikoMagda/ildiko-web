@@ -325,6 +325,12 @@ z-index: 2000;
 
 /* ABOUT HEADER*/
 
+@media screen and (max-width:768px){
+  section{
+    display: none;
+  }
+}
+
 
 /*SOCIAL ICONS */
 section{
