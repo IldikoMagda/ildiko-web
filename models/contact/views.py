@@ -4,7 +4,6 @@ from flask_mail import Message, Mail
 
 __author__ = 'Ildiko'
 
-
 contact_blueprint = Blueprint('contact', __name__)
 mail = Mail()
 
