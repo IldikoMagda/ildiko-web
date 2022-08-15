@@ -1,15 +1,6 @@
-### This script will genererate all neccesary data for account progress visualisation ### 
-import pandas as pd 
-import numpy as np 
-import matplotlib.pyplot as plt
-import get_current_price
-from db import stocks_list, sum_share_value, sum_amount_spent
-import plotly.express as px
-import yfinance as yf
-import datetime as DT
+### This script will genererate all neccesary data for account progress visualisation ###
 
-#update current prices on db 
-#get_current_price 
+from db import stocks_list, sum_share_value, sum_amount_spent
 
 #starting balance 
 #for now is static, can be made dynamic if more added
@@ -24,8 +15,6 @@ account_value = current_balance +share_value
 account_growth = round(account_value/ starting_balance, 3)
 net_profit = round(current_balance + share_value-starting_balance, 3)
 
-
 piechartdata = {'Industry':'Asset Percentage in Portfolio','Oil and Gas':1, 'Internet Content and Information':1}
-#get data as frame 
-#let's start with stock trend data
+
 
