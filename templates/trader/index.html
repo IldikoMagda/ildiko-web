@@ -1,6 +1,81 @@
 {% extends "menu.html" %}
 {% block content %}
-This is the page where I put my trading account info 
+<body>
+
+
+<div class ="boxes-field" id = "bxf" >
+    <div class = "Title" id = "bxt"> 
+        <h1>Portfolio Overview</h1>
+    </div>
+
+    <div class = "boxes-header" id ="bxh">
+        <h1>Invested</h1>
+        <h1> Present Rate of Return </h1>
+        <h1> Present Net Profit</h1>
+    </div>
+
+    <div class = "boxes-body" id = "bxb">
+        <div class = "invested-box" id = "invested-box">
+            <q> {{starting_balance}} </q>
+        </div>
+        <div class = "growth-box" id = "growth-box">
+            <q> {{account_growth}} </q>
+        </div>
+        <div class = "magic-box" id = "magic-box">
+            <q> {{net_profit}} </q>
+        </div>
+    </div>
+</div>
+
+<div class = "info-field" id = "inff">
+    <div class = "section1" id ="sec1">
+        <p> Number of shares in portfolio: </p> 
+        <p> 2 </p>
+    </div>
+    <div class = "section2" id ="sec2">
+        <p> Number of shares in gain: </p> 
+        <p> 2 </p>  
+    </div>
+    <div class = "section3" id ="sec3">
+        <p> Number of shares in loss: </p>
+        <p> 0 </p> 
+    </div>
+</div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load("current", {packages:["corechart"]});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var piechartdata = google.visualization.arrayToDataTable([
+        {% for key, value in piechartdata.items() %}
+            {% if value is string %}
+                ['{{key}}', '{{value}}'],
+            {% else %}
+                ['{{key}}', {{value}}],
+            {% endif %}
+        {% endfor %}
+    ]);
+
+    var options = {
+      is3D: true,
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+    chart.draw(piechartdata, options);
+  }
+</script>
+
+
+<div class "asset_allocation_cont" id ="aac">
+    <div class "asset_alloc_header" id = "aah">
+        <h2>Asset Allocation</h2>
+    </div>
+    <div class "asset_alloc_box" id = "aab">
+        <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+    </div>
+</div>
+</body>
 
 
 {% endblock %}
