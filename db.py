@@ -1,6 +1,5 @@
 from sqlalchemy import create_engine
 from config import SQLALCHEMY_DATABASE_URI
-import pandas as pd
 import psycopg2
 
 #data_loc = "/home/ildiko/Desktop/ildiko-web/initial_data.csv"

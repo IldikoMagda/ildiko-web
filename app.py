@@ -5,7 +5,7 @@ from models.about.views import about_blueprint
 #from models.interactive.views import interactive_blueprint
 from models.portfolio.views import portfolio_blueprint
 from models.trader.views import trader_blueprint
-from get_current_price import current_prices
+#from get_current_price import current_prices
 
 #mail = Mail()
 app = Flask(__name__)
@@ -21,4 +21,4 @@ app.register_blueprint(portfolio_blueprint, url_prefix="/portfolio")
 app.register_blueprint(trader_blueprint, url_prefix="/TheLazyTrader")
 #app.register_blueprint(contact_blueprint, url_prefix="/contact")
 
-current_prices()
+#current_prices()

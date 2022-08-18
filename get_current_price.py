@@ -13,3 +13,6 @@ def current_prices():
     for index, eachstock in enumerate(list_of_tickers):
         update_current_price(eachstock,new_price_list[index])
     
+#get industries
+def get_industries(stock_symbol):
+    pass
