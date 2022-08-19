@@ -47,8 +47,8 @@
   google.charts.load("current", {packages:["corechart"]});
   google.charts.setOnLoadCallback(drawChart);
   function drawChart() {
-    var piechartdata = google.visualization.arrayToDataTable([
-        {% for key, value in piechartdata.items() %}
+    var industries = google.visualization.arrayToDataTable([
+        {% for key, value in industries.items() %}
             {% if value is string %}
                 ['{{key}}', '{{value}}'],
             {% else %}
@@ -56,16 +56,15 @@
             {% endif %}
         {% endfor %}
     ]);
-
+    
     var options = {
       is3D: true,
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-    chart.draw(piechartdata, options);
+    chart.draw(industries, options);
   }
 </script>
-
 
 <div class "asset_allocation_cont" id ="aac">
     <div class "asset_alloc_header" id = "aah">

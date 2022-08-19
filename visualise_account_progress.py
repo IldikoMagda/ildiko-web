@@ -15,7 +15,5 @@ account_value = current_balance +share_value
 account_growth = round(account_value/ starting_balance, 3)
 net_profit = round(current_balance + share_value-starting_balance, 3)
 
-
-piechartdata = {'Industry':'Asset Percentage in Portfolio','Telecom services':1, 'Internet Content and Information':1, 'Pharmaceutical Retailer':1}
-
+#number of stocks in gain and loss: 
 

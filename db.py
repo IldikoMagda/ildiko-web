@@ -58,3 +58,5 @@ def stocks_list():
 #print(sum_share_value())
 #print(stocks_list())
 #print(engine.execute("SELECT * FROM account_details").fetchall())
+
+#I want to alter table to have an industry column 
