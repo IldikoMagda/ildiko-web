@@ -49,7 +49,12 @@ def stocks_list():
     sql = """ SELECT stock_symbol FROM account_details"""
     breakdown = [i[0] for i in engine.execute(sql)]
     return breakdown
-    
+
+def boughat_list():
+    sql = """ SELECT stock_price_bought FROM account_details"""
+    a = [i[0] for i in engine.execute(sql)]
+    return a 
+
 # obj =engine.execute("""SELECT column_name FROM information_schema.columns where TABLE_NAME = 'account_details'""")
 # for i in obj:
 #     print(i)
