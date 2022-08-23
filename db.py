@@ -1,6 +1,7 @@
 from sqlalchemy import create_engine
 from config import SQLALCHEMY_DATABASE_URI
 import psycopg2
+import yfinance as yf
 
 #data_loc = "/home/ildiko/Desktop/ildiko-web/initial_data.csv"
 engine = create_engine(SQLALCHEMY_DATABASE_URI)
@@ -19,6 +20,11 @@ def update_current_price(ticker, new_price):
     sql = """ UPDATE account_details SET current_price=(%s) WHERE stock_symbol = (%s)"""
     with con: 
         cur.execute(sql, (new_price, ticker))
+
+def return_current_prices_list():
+    sql = """ SELECT current_price FROM account_details"""
+    a = [i[0] for i in engine.execute(sql)]
+    return a
     
 #query to insert record to db
 def insert_stock(symbol, boughtat):
@@ -55,13 +61,24 @@ def boughat_list():
     a = [i[0] for i in engine.execute(sql)]
     return a 
 
+#industries column added to table
+# sql = """ ALTER TABLE account_details ADD COLUMN IF NOT EXISTS industry varchar"""
+# engine.execute(sql)
+
+def add_industry(symbol):
+    stock = yf.Ticker(str(symbol))
+    industry = stock.info['industry']
+    sql = """UPDATE account_details SET industry =%s WHERE stock_symbol = %s"""
+    with con: 
+        cur.execute(sql, (industry, symbol))
+        
+#return industries 
+def return_industries():
+    sql = """ SELECT industry FROM account_details"""
+    a = [i[0] for i in engine.execute(sql)]
+    return a 
+
 # obj =engine.execute("""SELECT column_name FROM information_schema.columns where TABLE_NAME = 'account_details'""")
-# for i in obj:
-#     print(i)
-#remove_stock('GOOG')
-#update_current_price('MRO', 80)
 #print(sum_share_value())
 #print(stocks_list())
 #print(engine.execute("SELECT * FROM account_details").fetchall())
-
-#I want to alter table to have an industry column 

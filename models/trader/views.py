@@ -1,7 +1,8 @@
 from flask import Blueprint, render_template
+from db import return_industries
 from visualise_account_progress import account_growth, starting_balance, net_profit, number_of_stocks
 from visualise_account_progress import nr_gains_losses
-from get_current_price import current_industries
+#from get_current_price import current_industries
 from collections import Counter
 
 __author__ = 'Ildiko'
@@ -11,7 +12,8 @@ trader_blueprint = Blueprint('trader', __name__, template_folder='templates')
 
 def index():         
     #get current industries on portfolio 
-    industries_list = current_industries()
+    #industries_list = current_industries()
+    industries_list = return_industries()
     #dict of how many of each industry share we have, merge with header dict
     industries_starter = {'Industry':'Asset Percentage in Portfolio'}
     industries_coll= dict(Counter(industries_list))

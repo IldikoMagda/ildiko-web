@@ -2,7 +2,7 @@
 
 from re import sub
 from db import stocks_list, sum_share_value, sum_amount_spent
-from db import boughat_list
+from db import boughat_list, return_current_prices_list
 from get_current_price import current_prices
 
 #starting balance 
@@ -24,14 +24,17 @@ def nr_gains_losses():
     nr_gaining_stock = 0 
     nr_loosing_stock = 0
     boughtat = boughat_list()
-    #dynamically takes longer to run:
+    #dynamically  fetch from yf takes longer to run:
     #currentprices = current_prices()
     
     #static:
-    currentprices = [43.99, 38.22, 36.54]
+    #currentprices = [43.99, 38.22, 36.54]
+    
+    #fetch from own db 
+    current_prices = return_current_prices_list()
     subtracted = list()
     #subtract current price - boughtat
-    for item1, item2, in zip(currentprices, boughtat):
+    for item1, item2, in zip(current_prices, boughtat):
         subtracted.append(item1 - item2 )
     print(subtracted)
     #count stocks in gain and in loss
