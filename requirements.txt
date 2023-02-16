@@ -45,7 +45,7 @@ six==1.16.0
 SQLAlchemy==1.4.39
 tenacity==8.0.1
 urllib3==1.26.11
-Werkzeug==2.2.1
+Werkzeug==2.2.3
 WTForms==3.0.1
 yfinance==0.1.74
 zipp==3.8.1
